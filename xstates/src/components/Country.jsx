@@ -39,6 +39,7 @@ const Home = () => {
     }, [selectedCountry]);
 
     useEffect(() => {
+        // Fetch all cities
         if(selectedCountry && selectedState) {
             try {
                 fetch(`https://crio-location-selector.onrender.com/country=${selectedCountry}/state=${selectedState}/cities`)
@@ -91,7 +92,7 @@ const Home = () => {
                         <option key={country} value={country}>{country}</option>
                     ))}
                 </select>
-                <select id="state" value={selectedState} className={styles.formSelect} onChange={handleStateChange} disabled={!selectedCountry}>
+                <select id="state" value={selectedState} className={styles.formSelect} onChange={handleStateChange}>
                     <option value="">Select State</option>
                     {states.map((state) => (
                         <option key={state} value={state}>{state}</option>
