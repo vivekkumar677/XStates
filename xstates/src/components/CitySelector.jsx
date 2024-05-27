@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // import styles from "../components/Home.module.css";
 import styles from '../components/Country.module.css';
 
-const Home = () => {
+const CitySelector = () => {
 
     const [countries, setCountries] = useState([]);
     const [states, setStates] = useState([]);
@@ -110,4 +110,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default CitySelector;

@@ -1,13 +1,11 @@
 
 import './App.css';
-// import Home from './components/Home';
-import Country from './components/Country';
+import CitySelector from './components/CitySelector';
 
 function App() {
   return (
     <div className="App">
-      {/* <Home /> */}
-      <Country />
+      <CitySelector />
     </div>
   );
 }
