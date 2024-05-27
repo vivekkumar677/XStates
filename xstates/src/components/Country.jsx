@@ -92,7 +92,7 @@ const Home = () => {
                         <option key={country} value={country}>{country}</option>
                     ))}
                 </select>
-                <select id="state" value={selectedState} className={styles.formSelect} onChange={handleStateChange}>
+                <select id="state" value={selectedState} className={styles.formSelect} onChange={handleStateChange} disabled={!selectedCountry}>
                     <option value="">Select State</option>
                     {states.map((state) => (
                         <option key={state} value={state}>{state}</option>
